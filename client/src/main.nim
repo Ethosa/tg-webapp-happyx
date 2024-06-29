@@ -7,6 +7,8 @@ import
 var tg: JsObject
 {.emit: "`tg` = window.Telegram.WebApp;".}
 
+var data = remember $window.location.href
+
 
 # Declare application with ID "app"
 appRoutes("app"):
@@ -14,3 +16,7 @@ appRoutes("app"):
     # Component usage
     tDiv(class = "w-screen min-h-screen h-full bg-blue-900 text-white p-12"):
       "Hello from Nim!"
+      " queries is "
+      {data}
+
+route"/"
