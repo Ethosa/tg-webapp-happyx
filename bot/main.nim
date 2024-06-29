@@ -23,4 +23,4 @@ when isMainModule:
   let bot = newTeleBot(API_KEY)
 
   bot.onUpdate(updateHandler)
-  bot.poll(timeout=300)
+  bot.poll(timeout=300, clean = true)
