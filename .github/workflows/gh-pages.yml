@@ -50,7 +50,7 @@ jobs:
         run: |
           export PATH=/home/.nimble/bin:$PATH
           cd ./client/src/
-          nim js -d:production -d:release --opt:size --hints:off --warnings:off --out:main_full.js main
+          nim js -d:historyApi -d:production -d:release --opt:size --hints:off --warnings:off --out:main_full.js main
           uglifyjs main_full.js -c -m --mangle-props regex=/N[ST]I\w+/ -o main.js
           cd ../..
           mkdir -p ./docs/

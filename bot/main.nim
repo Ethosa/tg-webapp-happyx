@@ -12,7 +12,7 @@ proc updateHandler(b: Telebot, u: Update): Future[bool] {.gcsafe, async.} =
     let text = response.text
     var playBtn = InlineKeyboardButton(
       text: "Play now!",
-      webApp: WebAppInfo(url: "https://ethosa.github.io/tg-webapp-happyx/#/")
+      webApp: WebAppInfo(url: "https://ethosa.github.io/tg-webapp-happyx/")
     )
 
     discard await b.sendMessage(
