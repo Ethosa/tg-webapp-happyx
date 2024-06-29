@@ -10,9 +10,12 @@ proc updateHandler(b: Telebot, u: Update): Future[bool] {.gcsafe, async.} =
   var response = u.message
   if response.text.len > 0:
     let text = response.text
-    var google = KeyboardButton(text: "Search the web", webApp: WebAppInfo(url: "https://ethosa.github.io/tg-webapp-happyx/#/"))
+    var playBtn = InlineKeyboardButton(
+      text: "Play now!",
+      webApp: WebAppInfo(url: "https://ethosa.github.io/tg-webapp-happyx/#/")
+    )
 
-    let replyMarkup = ReplyKeyboardMarkup(kind: kReplyKeyboardMarkup, keyboard: @[@[google]])
+    let replyMarkup = InlineKeyboardMarkup(inlineKeyboard: @[@[playBtn]])
 
     discard await b.sendMessage(response.chat.id, text, replyMarkup = replyMarkup)
 
