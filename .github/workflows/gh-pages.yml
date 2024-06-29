@@ -53,7 +53,7 @@ jobs:
           nim js -d:production -d:release --opt:size --hints:off --warnings:off --out:main_full.js main
           uglifyjs main_full.js -c -m --mangle-props regex=/N[ST]I\w+/ -o main.js
           cd ../../..
-          mkdir ./docs/public/
+          mkdir -p ./docs/public/
           cp ./client/index.html ./docs/
           cp ./client/main.js ./docs/
           cp ./client/public/* ./docs/public/
