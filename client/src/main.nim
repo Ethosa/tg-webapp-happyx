@@ -1,7 +1,12 @@
 # Import HappyX
 import
   happyx,
-  components/[hello_world]
+  std/jsffi
+
+
+var tg: JsObject
+{.emit: "`tg` = window.Telegram.WebApp;".}
+
 
 # Declare application with ID "app"
 appRoutes("app"):
