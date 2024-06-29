@@ -1,0 +1,66 @@
+name: Github Pages 🌐
+
+on:
+  push:
+    branches:
+      - 'master'
+    paths-ignore:
+      - '.github/ISSUE_TEMPLATE/*'
+      - '*.md'
+      - '*.nimble'
+      - '.gitignore'
+      - 'LICENSE'
+
+permissions:
+  contents: write
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    env:
+      nim_version: '2.0.6'
+      node_version: '20'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ env.node_version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.node_version }}
+      
+      - name: Install uglify-js 👀
+        run: |
+          npm install uglify-js -g
+
+      - name: Install Nim 👑
+        run: |
+          sudo apt install xz-utils
+          curl https://nim-lang.org/download/nim-${{ env.nim_version }}-linux_x64.tar.xz --output nim.tar.xz
+          unxz nim.tar.xz
+          tar -xf nim.tar
+          sudo mkdir -p /home/.nimble
+          sudo mv -if nim-${{ env.nim_version }}/* /home/.nimble/
+          export PATH=/home/.nimble/bin:$PATH
+          nim -v
+          nimble refresh
+          nimble install -y
+
+      - name: Build website 🌐
+        timeout-minutes: 2
+        run: |
+          export PATH=/home/.nimble/bin:$PATH
+          cd ./client/src/
+          nim js -d:production -d:release --opt:size --hints:off --warnings:off --out:main_full.js main
+          uglifyjs main_full.js -c -m --mangle-props regex=/N[ST]I\w+/ -o main.js
+          cd ../../..
+          mkdir ./docs/public/
+          cp ./client/index.html ./docs/
+          cp ./client/main.js ./docs/
+          cp ./client/public/* ./docs/public/
+
+      - name: Deploy documents 💨
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+        if: github.ref == 'refs/heads/master'
