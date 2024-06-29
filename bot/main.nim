@@ -15,9 +15,13 @@ proc updateHandler(b: Telebot, u: Update): Future[bool] {.gcsafe, async.} =
       webApp: WebAppInfo(url: "https://ethosa.github.io/tg-webapp-happyx/#/")
     )
 
-    let replyMarkup = InlineKeyboardMarkup(inlineKeyboard: @[@[playBtn]])
-
-    discard await b.sendMessage(response.chat.id, text, replyMarkup = replyMarkup)
+    discard await b.sendMessage(
+      response.chat.id, text,
+      replyMarkup = InlineKeyboardMarkup(
+        kind: kInlineKeyboardMarkup,
+        inlineKeyboard: @[@[playBtn]]
+      )
+    )
 
 when isMainModule:
   let bot = newTeleBot(API_KEY)
