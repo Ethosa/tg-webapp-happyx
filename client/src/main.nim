@@ -7,4 +7,5 @@ import
 appRoutes("app"):
   "/":
     # Component usage
-    component HelloWorld
+    tDiv(class = "w-screen min-h-screen h-full bg-blue-900 text-white p-12"):
+      "Hello from Nim!"
