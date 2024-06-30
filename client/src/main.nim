@@ -1,22 +1,20 @@
 # Import HappyX
 import
   happyx,
-  std/jsffi
+  telebot/webapp
 
 
-var tg: JsObject
-{.emit: "`tg` = window.Telegram.WebApp;".}
-
+var tg = Telegram.WebApp
 var data = remember $window.location.href
 
 
 # Declare application with ID "app"
 appRoutes("app"):
-  "/":
+  # Основная страница
+  "/{p:path}":
     # Component usage
-    tDiv(class = "w-screen min-h-screen h-full bg-blue-900 text-white p-12"):
-      "Hello from Nim!"
-      " queries is "
-      {data}
-
-route"/"
+    tDiv(class = "flex flex-col w-screen min-h-screen h-full bg-blue-900 text-white p-12"):
+      tP:
+        "Hello from Nim!"
+      tP:
+        {p}
