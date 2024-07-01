@@ -6,7 +6,7 @@ import telebot/webapp
 var tg = Telegram.WebApp
 
 
-proc MainPage(): TagRef =
+proc MainPage(data: string): TagRef =
   buildHtml:
     # Component usage
     tDiv(
@@ -18,6 +18,8 @@ proc MainPage(): TagRef =
       tP:
         {window.location.href}
       tP:
+        {data}
+      tP:
         {tg.version}
 
 
@@ -25,8 +27,10 @@ proc MainPage(): TagRef =
 appRoutes("app"):
   # Основная страница
   "/":
-    MainPage
+    MainPage("")
   "":
-    MainPage
+    MainPage("")
+  "tgWebAppData={p:path}":
+    MainPage(p)
   "/{p:path}":
-    MainPage
+    MainPage(p)
