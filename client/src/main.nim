@@ -6,10 +6,8 @@ import telebot/webapp
 var tg = Telegram.WebApp
 
 
-# Declare application with ID "app"
-appRoutes("app"):
-  # Основная страница
-  "/{p:path}":
+proc MainPage(): TagRef =
+  buildHtml:
     # Component usage
     tDiv(
       class = "flex flex-col w-screen min-h-screen h-full p-12",
@@ -18,6 +16,17 @@ appRoutes("app"):
       tP:
         "Hello from Nim!"
       tP:
-        {p}
+        {window.location.href}
       tP:
         {tg.version}
+
+
+# Declare application with ID "app"
+appRoutes("app"):
+  # Основная страница
+  "/":
+    MainPage
+  "":
+    MainPage
+  "/{p:path}":
+    MainPage
