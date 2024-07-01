@@ -11,7 +11,7 @@ appRoutes("app"):
   # Основная страница
   "/{p:string}":
     tDiv(
-      class = "flex flex-col w-screen min-h-screen h-full p-12 bg-blue-200",
+      class = "flex flex-col w-screen min-h-screen h-full p-12",
       style = fmt"background: {tg.themeParams.bg_color}; color: {tg.themeParams.text_color}"
     ):
       tP:
