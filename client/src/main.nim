@@ -11,7 +11,10 @@ appRoutes("app"):
   # Основная страница
   "/{p:path}":
     # Component usage
-    tDiv(class = "flex flex-col w-screen min-h-screen h-full bg-blue-900 text-white p-12"):
+    tDiv(
+      class = "flex flex-col w-screen min-h-screen h-full p-12",
+      style = fmt"background: {tg.themeParams.bg_color}; color: {tg.themeParams.text_color}"
+    ):
       tP:
         "Hello from Nim!"
       tP:
