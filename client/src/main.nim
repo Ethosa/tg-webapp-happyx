@@ -23,6 +23,7 @@ proc MainPage(data: string): TagRef =
         {tg.version}
 
 
+echo strip(`$`(window.location.hash), true, false, {'#'}) 
 # Declare application with ID "app"
 appRoutes("app"):
   # Основная страница
