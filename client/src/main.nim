@@ -3,7 +3,11 @@ import happyx
 import telebot/webapp
 
 
-var tg = Telegram.WebApp
+var
+  tg = Telegram.WebApp
+  themeParams = tg.themeParams
+  bgColor = themeParams.bg_color
+  textColor = themeParams.text_color
 
 
 # Declare application with ID "app"
@@ -12,7 +16,7 @@ appRoutes("app"):
   "/{p:string}":
     tDiv(
       class = "flex flex-col w-screen min-h-screen h-full p-12",
-      style = fmt"background: {tg.themeParams.bg_color}; color: {tg.themeParams.text_color}"
+      style = fmt"background: {bgColor}; color: {textColor}"
     ):
       tP:
         "Hello from Nim!"
