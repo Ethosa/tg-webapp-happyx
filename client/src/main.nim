@@ -6,32 +6,19 @@ import telebot/webapp
 var tg = Telegram.WebApp
 
 
-proc MainPage(): TagRef =
-  buildHtml:
-    # Component usage
+# Declare application with ID "app"
+appRoutes("app"):
+  # Основная страница
+  "/{p:string}":
     tDiv(
       class = "flex flex-col w-screen min-h-screen h-full p-12 bg-blue-200",
-      # style = fmt"background: {tg.themeParams.bg_color}; color: {tg.themeParams.text_color}"
+      style = fmt"background: {tg.themeParams.bg_color}; color: {tg.themeParams.text_color}"
     ):
       tP:
         "Hello from Nim!"
       tP:
         {window.location.href}
       tP:
+        {p}
+      tP:
         {tg.version}
-
-
-echo strip(`$`(window.location.hash), true, false, {'#'}) 
-# Declare application with ID "app"
-appRoutes("app"):
-  # Основная страница
-  "/":
-    MainPage
-  "":
-    MainPage
-  "?tgWebAppData={p:string}":
-    MainPage
-  "tgWebAppData={p:string}":
-    MainPage
-  "/{p:string}":
-    MainPage
