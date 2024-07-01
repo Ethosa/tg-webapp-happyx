@@ -1,11 +1,9 @@
 # Import HappyX
-import
-  happyx,
-  telebot/webapp
+import happyx
+import telebot/webapp
 
 
 var tg = Telegram.WebApp
-var data = remember $window.location.href
 
 
 # Declare application with ID "app"
@@ -18,3 +16,5 @@ appRoutes("app"):
         "Hello from Nim!"
       tP:
         {p}
+      tP:
+        {tg.version}
