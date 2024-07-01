@@ -27,7 +27,7 @@ jobs:
           nim -v
           nimble refresh
           nimble install happyx@#head -y
-          nimble install https://github.com/Ethosa/telebot.nim -y
+          nimble install https://github.com/Ethosa/telebot.nim@#head -y
 
       - name: Build website 🌐
         timeout-minutes: 2
