@@ -9,7 +9,7 @@ var tg = Telegram.WebApp
 # Declare application with ID "app"
 appRoutes("app"):
   # Основная страница
-  "{p:path}":
+  "/{p:path}":
     # Component usage
     tDiv(class = "flex flex-col w-screen min-h-screen h-full bg-blue-900 text-white p-12"):
       tP:

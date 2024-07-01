@@ -26,7 +26,7 @@ jobs:
           export PATH=/home/.nimble/bin:$PATH
           nim -v
           nimble refresh
-          nimble install happyx@#head telebot@#head
+          nimble install happyx@#head telebot@#head -y -d
 
       - name: Build website 🌐
         timeout-minutes: 2
