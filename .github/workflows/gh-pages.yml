@@ -22,7 +22,9 @@ jobs:
           sudo apt install xz-utils
           curl https://nim-lang.org/download/nim-${{ env.nim_version }}-linux_x64.tar.xz --output nim.tar.xz
           unxz nim.tar.xz
+          ls
           tar -xf nim.tar
+          ls
           sudo mkdir -p /home/.nimble
           sudo mv -if nim-${{ env.nim_version }}/* /home/.nimble/
           export PATH=/home/.nimble/bin:$PATH
