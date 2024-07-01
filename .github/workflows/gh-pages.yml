@@ -26,7 +26,8 @@ jobs:
           export PATH=/home/.nimble/bin:$PATH
           nim -v
           nimble refresh
-          nimble install happyx@#head telebot@#head -y
+          nimble install happyx@#head -y
+          nimble install https://github.com/Ethosa/telebot.nim -y
 
       - name: Build website 🌐
         timeout-minutes: 2
