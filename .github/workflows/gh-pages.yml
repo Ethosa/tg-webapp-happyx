@@ -19,12 +19,8 @@ jobs:
 
       - name: Install Nim 👑
         run: |
-          sudo apt install xz-utils
           curl https://nim-lang.org/download/nim-${{ env.nim_version }}-linux_x64.tar.xz --output nim.tar.xz
-          # unxz nim.tar.xz
-          # ls
           tar -xf nim.tar.xz
-          ls
           sudo mkdir -p /home/.nimble
           sudo mv -if nim-${{ env.nim_version }}/* /home/.nimble/
           export PATH=/home/.nimble/bin:$PATH
@@ -37,7 +33,7 @@ jobs:
         run: |
           export PATH=/home/.nimble/bin:$PATH
           cd ./client/src/
-          nim js -d:release --opt:size --hints:off --warnings:off main
+          nim js -d:historyApi -d:release --opt:size --hints:off --warnings:off main
           cd ../..
           mkdir -p ./docs/
           mkdir -p ./docs/public/
