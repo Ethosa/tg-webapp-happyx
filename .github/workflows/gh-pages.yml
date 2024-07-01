@@ -4,12 +4,6 @@ on:
   push:
     branches:
       - 'master'
-    paths-ignore:
-      - '.github/ISSUE_TEMPLATE/*'
-      - '*.md'
-      - '*.nimble'
-      - '.gitignore'
-      - 'LICENSE'
 
 permissions:
   contents: write
@@ -22,15 +16,6 @@ jobs:
       node_version: '20'
     steps:
       - uses: actions/checkout@v4
-
-      - name: Use Node.js ${{ env.node_version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ env.node_version }}
-      
-      - name: Install uglify-js 👀
-        run: |
-          npm install uglify-js -g
 
       - name: Install Nim 👑
         run: |
@@ -50,8 +35,7 @@ jobs:
         run: |
           export PATH=/home/.nimble/bin:$PATH
           cd ./client/src/
-          nim js -d:release --opt:size --hints:off --warnings:off --out:main_full.js main
-          uglifyjs main_full.js -c -m --mangle-props regex=/N[ST]I\w+/ -o main.js
+          nim js -d:release --opt:size --hints:off --warnings:off main
           cd ../..
           mkdir -p ./docs/
           mkdir -p ./docs/public/
