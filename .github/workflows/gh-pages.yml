@@ -33,7 +33,7 @@ jobs:
         run: |
           export PATH=/home/.nimble/bin:$PATH
           cd ./client/src/
-          nim js -d:historyApi -d:release --opt:size --hints:off --warnings:off main
+          nim js -d:release --opt:size --hints:off --warnings:off main
           cd ../..
           mkdir -p ./docs/
           mkdir -p ./docs/public/
