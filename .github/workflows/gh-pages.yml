@@ -43,6 +43,7 @@ jobs:
           export PATH=/home/.nimble/bin:$PATH
           nim -v
           nimble refresh
+          nimble remove telebot -y
           nimble install happyx@#head telebot
 
       - name: Build website 🌐
