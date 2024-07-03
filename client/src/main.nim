@@ -27,15 +27,11 @@ appRoutes "app":
     tDiv(
       class = fmt"flex flex-col w-screen min-h-screen h-full p-12 bg-[{tg.themeParams.bgColor}] text-[{tg.themeParams.textColor}]",
     ):
-      tP:
-        "Hello from Nim! Counter is "
+      tP(class = "text-3xl"):
+        "Hello from Nim!"
+      tP(class = "text-7xl"):
         {counter}
-      tButton(
-        style = fmt"background: {tg.themeParams.button_color}; color: {tg.themeParams.button_text_color}"
-      ):
-        "click me!"
-        @click:
-          counter->inc()
-      tP:
-        "Telegram v"
-        {tg.version}
+      tDiv(class = "fixed bottom-4 right-4 opacity-70"):
+        tP:
+          "Your telegram version is v"
+          {tg.version}
