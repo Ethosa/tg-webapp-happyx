@@ -28,14 +28,13 @@ appRoutes "app":
       class = fmt"flex flex-col justify-content items-center w-screen min-h-screen h-screen p-12 bg-[{tg.themeParams.bgColor}] text-[{tg.themeParams.textColor}]",
     ):
       tDiv(class = "w-full h-full flex flex-col items-center justify-center"):
-        tP(class = "text-3xl"):
+        tP(class = "text-xl"):
           "Hello from Nim, "
           tSpan(class = fmt"text-[{tg.themeParams.buttonColor}]"):
             {tg.initDataUnsafe.user.first_name}
           "!"
         tP(class = "text-9xl"):
           {counter}
-      tDiv(class = "fixed bottom-32 right-8 opacity-70"):
-        tP(class = "text-3xl"):
-          "Your telegram version is v"
-          {tg.version}
+      tDiv(class = "fixed bottom-4 right-4 opacity-70"):
+        "Your telegram version is v"
+        {tg.version}
