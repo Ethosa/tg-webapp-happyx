@@ -5,7 +5,6 @@ var lastJSError = null;
 var NTI2130708424 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI2130708421 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
 var NTI2130708418 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI553648599 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI553648433 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI33555179 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NTI134217746 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
@@ -785,9 +784,6 @@ NTI134217747.base = NTI134217746;
 var NNI553648433 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
 NTI553648433.node = NNI553648433;
-var NNI553648599 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
-{kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI553648599.node = NNI553648599;
 var NNI2130708424 = {kind: 2, len: 3, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI1308622851, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554450, name: "Field1", sons: null}, 
 {kind: 1, offset: "Field2", len: 0, typ: NTI33554450, name: "Field2", sons: null}]};
@@ -1561,13 +1557,13 @@ function addChars_301990090(result_301990092, result_301990092_Idx, x_301990093,
          else {result_301990092[result_301990092_Idx].length = Temporary1; };
     Label2: {
       var iHEX60gensym4_301990110 = 0;
-      var i_553649415 = 0;
+      var i_553649439 = 0;
       Label3: {
           Label4: while (true) {
-          if (!(i_553649415 < n_301990095)) break Label4;
-            iHEX60gensym4_301990110 = i_553649415;
+          if (!(i_553649439 < n_301990095)) break Label4;
+            iHEX60gensym4_301990110 = i_553649439;
             result_301990092[result_301990092_Idx][chckIndx(addInt(old_301990096, iHEX60gensym4_301990110), 0, (result_301990092[result_301990092_Idx]).length - 1)] = x_301990093.charCodeAt(chckIndx(addInt(start_301990094, iHEX60gensym4_301990110), 0, (x_301990093).length - 1));
-            i_553649415 = addInt(i_553649415, 1);
+            i_553649439 = addInt(i_553649439, 1);
           }
       };
     };
@@ -1817,20 +1813,20 @@ function hashIgnoreCase_1308623391(x_1308623392) {
     var h_1308623394 = 0;
     Label1: {
       var i_1308623399 = 0;
-      var colontmp__553649427 = 0;
-      colontmp__553649427 = subInt((x_1308623392).length, 1);
-      var res_553649428 = 0;
+      var colontmp__553649451 = 0;
+      colontmp__553649451 = subInt((x_1308623392).length, 1);
+      var res_553649452 = 0;
       Label2: {
           Label3: while (true) {
-          if (!(res_553649428 <= colontmp__553649427)) break Label3;
-            i_1308623399 = res_553649428;
+          if (!(res_553649452 <= colontmp__553649451)) break Label3;
+            i_1308623399 = res_553649452;
             var c_1308623400 = x_1308623392[chckIndx(i_1308623399, 0, (x_1308623392).length - 1)];
             if ((ConstSet2[c_1308623400] != undefined)) {
             c_1308623400 = chckRange(addInt(c_1308623400, 32), 0, 255);
             }
             
             h_1308623394 = HEX21HEX26_1308622851(h_1308623394, c_1308623400);
-            res_553649428 = addInt(res_553649428, 1);
+            res_553649452 = addInt(res_553649452, 1);
           }
       };
     };
@@ -2129,13 +2125,13 @@ function enlarge_2164261090(t_2164261091) {
     var n_2164261092 = [[]];
     n_2164261092[0] = new Array(chckRange(mulInt((t_2164261091.data).length, 2), 0, 2147483647)); for (var i = 0 ; i < chckRange(mulInt((t_2164261091.data).length, 2), 0, 2147483647) ; ++i) { n_2164261092[0][i] = {Field0: [], Field1: [], Field2: false}; }    Label1: {
       var i_2164261109 = 0;
-      var colontmp__553649436 = 0;
-      colontmp__553649436 = (t_2164261091.data).length - 1;
-      var res_553649438 = 0;
+      var colontmp__553649460 = 0;
+      colontmp__553649460 = (t_2164261091.data).length - 1;
+      var res_553649462 = 0;
       Label2: {
           Label3: while (true) {
-          if (!(res_553649438 <= colontmp__553649436)) break Label3;
-            i_2164261109 = res_553649438;
+          if (!(res_553649462 <= colontmp__553649460)) break Label3;
+            i_2164261109 = res_553649462;
             if (t_2164261091.data[chckIndx(i_2164261109, 0, (t_2164261091.data).length - 1)].Field2) {
             Temporary4 = t_2164261091.data[chckIndx(i_2164261109, 0, (t_2164261091.data).length - 1)].Field0;
             t_2164261091.data[chckIndx(i_2164261109, 0, (t_2164261091.data).length - 1)].Field0 = genericReset(t_2164261091.data[chckIndx(i_2164261109, 0, (t_2164261091.data).length - 1)].Field0, NTI33554449);
@@ -2144,7 +2140,7 @@ function enlarge_2164261090(t_2164261091) {
             rawInsert_2164261078(t_2164261091, n_2164261092, 0, Temporary4, Temporary5);
             }
             
-            res_553649438 = addInt(res_553649438, 1);
+            res_553649462 = addInt(res_553649462, 1);
           }
       };
     };
@@ -2177,14 +2173,14 @@ function nstnewStringTableWithTableConstr(keyValuePairs_2164261216, mode_2164261
     Label1: {
       var key_2164261232 = [];
       var val_2164261233 = [];
-      var i_553649419 = 0;
+      var i_553649443 = 0;
       Label2: {
           Label3: while (true) {
-          if (!(i_553649419 < (keyValuePairs_2164261216).length)) break Label3;
-            key_2164261232 = keyValuePairs_2164261216[chckIndx(i_553649419, 0, (keyValuePairs_2164261216).length - 1)]["Field0"];
-            val_2164261233 = keyValuePairs_2164261216[chckIndx(i_553649419, 0, (keyValuePairs_2164261216).length - 1)]["Field1"];
+          if (!(i_553649443 < (keyValuePairs_2164261216).length)) break Label3;
+            key_2164261232 = keyValuePairs_2164261216[chckIndx(i_553649443, 0, (keyValuePairs_2164261216).length - 1)]["Field0"];
+            val_2164261233 = keyValuePairs_2164261216[chckIndx(i_553649443, 0, (keyValuePairs_2164261216).length - 1)]["Field1"];
             nstPut(result_2164261218, key_2164261232, val_2164261233);
-            i_553649419 += 1;
+            i_553649443 += 1;
           }
       };
     };
@@ -2224,31 +2220,31 @@ function nsuSplitChar(s_738198049, sep_738198050, maxsplit_738198051) {
     result_738198052 = nimCopy(null, [], NTI738197877);
     Label1: {
       var xHEX60gensym67_738198058 = [];
-      var lastHEX60gensym34_553649442 = 0;
-      var splitsHEX60gensym34_553649443 = maxsplit_738198051;
+      var lastHEX60gensym34_553649466 = 0;
+      var splitsHEX60gensym34_553649467 = maxsplit_738198051;
       Label2: {
           Label3: while (true) {
-          if (!(lastHEX60gensym34_553649442 <= (s_738198049).length)) break Label3;
-            var firstHEX60gensym34_553649445 = lastHEX60gensym34_553649442;
+          if (!(lastHEX60gensym34_553649466 <= (s_738198049).length)) break Label3;
+            var firstHEX60gensym34_553649469 = lastHEX60gensym34_553649466;
             Label4: {
                 Label5: while (true) {
-                if (!((lastHEX60gensym34_553649442 < (s_738198049).length) && !((s_738198049[chckIndx(lastHEX60gensym34_553649442, 0, (s_738198049).length - 1)] == sep_738198050)))) break Label5;
-                  lastHEX60gensym34_553649442 = addInt(lastHEX60gensym34_553649442, 1);
+                if (!((lastHEX60gensym34_553649466 < (s_738198049).length) && !((s_738198049[chckIndx(lastHEX60gensym34_553649466, 0, (s_738198049).length - 1)] == sep_738198050)))) break Label5;
+                  lastHEX60gensym34_553649466 = addInt(lastHEX60gensym34_553649466, 1);
                 }
             };
-            if ((splitsHEX60gensym34_553649443 == 0)) {
-            lastHEX60gensym34_553649442 = (s_738198049).length;
+            if ((splitsHEX60gensym34_553649467 == 0)) {
+            lastHEX60gensym34_553649466 = (s_738198049).length;
             }
             
-            xHEX60gensym67_738198058 = substr_33558084(s_738198049, firstHEX60gensym34_553649445, subInt(lastHEX60gensym34_553649442, 1));
+            xHEX60gensym67_738198058 = substr_33558084(s_738198049, firstHEX60gensym34_553649469, subInt(lastHEX60gensym34_553649466, 1));
             var Temporary6 = nimCopy(null, xHEX60gensym67_738198058, NTI33554449);
             result_738198052.push(Temporary6);;
-            if ((splitsHEX60gensym34_553649443 == 0)) {
+            if ((splitsHEX60gensym34_553649467 == 0)) {
             break Label2;
             }
             
-            splitsHEX60gensym34_553649443 = subInt(splitsHEX60gensym34_553649443, 1);
-            lastHEX60gensym34_553649442 = addInt(lastHEX60gensym34_553649442, 1);
+            splitsHEX60gensym34_553649467 = subInt(splitsHEX60gensym34_553649467, 1);
+            lastHEX60gensym34_553649466 = addInt(lastHEX60gensym34_553649466, 1);
           }
       };
     };
@@ -2303,34 +2299,34 @@ function parseQuery_3103784965(q_3103784966) {
     result_3103784967 = nstnewStringTableWithTableConstr([], 0);
     Label2: {
       var i_3103784987 = [];
-      var lastHEX60gensym34_553649406 = 0;
-      var splitsHEX60gensym34_553649407 = (-1);
+      var lastHEX60gensym34_553649430 = 0;
+      var splitsHEX60gensym34_553649431 = (-1);
       Label3: {
           Label4: while (true) {
-          if (!(lastHEX60gensym34_553649406 <= (query_3103784986).length)) break Label4;
-            var firstHEX60gensym34_553649409 = lastHEX60gensym34_553649406;
+          if (!(lastHEX60gensym34_553649430 <= (query_3103784986).length)) break Label4;
+            var firstHEX60gensym34_553649433 = lastHEX60gensym34_553649430;
             Label5: {
                 Label6: while (true) {
-                if (!((lastHEX60gensym34_553649406 < (query_3103784986).length) && !((query_3103784986[chckIndx(lastHEX60gensym34_553649406, 0, (query_3103784986).length - 1)] == 38)))) break Label6;
-                  lastHEX60gensym34_553649406 = addInt(lastHEX60gensym34_553649406, 1);
+                if (!((lastHEX60gensym34_553649430 < (query_3103784986).length) && !((query_3103784986[chckIndx(lastHEX60gensym34_553649430, 0, (query_3103784986).length - 1)] == 38)))) break Label6;
+                  lastHEX60gensym34_553649430 = addInt(lastHEX60gensym34_553649430, 1);
                 }
             };
-            if ((splitsHEX60gensym34_553649407 == 0)) {
-            lastHEX60gensym34_553649406 = (query_3103784986).length;
+            if ((splitsHEX60gensym34_553649431 == 0)) {
+            lastHEX60gensym34_553649430 = (query_3103784986).length;
             }
             
-            i_3103784987 = substr_33558084(query_3103784986, firstHEX60gensym34_553649409, subInt(lastHEX60gensym34_553649406, 1));
+            i_3103784987 = substr_33558084(query_3103784986, firstHEX60gensym34_553649433, subInt(lastHEX60gensym34_553649430, 1));
             var splitted_3103784988 = nsuSplitChar(i_3103784987, 61, (-1));
             if (((2 <= (splitted_3103784988).length) && !(nsuEndsWith(splitted_3103784988[chckIndx(0, 0, (splitted_3103784988).length - 1)], [91,93])))) {
             nstPut(result_3103784967, splitted_3103784988[chckIndx(0, 0, (splitted_3103784988).length - 1)], splitted_3103784988[chckIndx(1, 0, (splitted_3103784988).length - 1)]);
             }
             
-            if ((splitsHEX60gensym34_553649407 == 0)) {
+            if ((splitsHEX60gensym34_553649431 == 0)) {
             break Label3;
             }
             
-            splitsHEX60gensym34_553649407 = subInt(splitsHEX60gensym34_553649407, 1);
-            lastHEX60gensym34_553649406 = addInt(lastHEX60gensym34_553649406, 1);
+            splitsHEX60gensym34_553649431 = subInt(splitsHEX60gensym34_553649431, 1);
+            lastHEX60gensym34_553649430 = addInt(lastHEX60gensym34_553649430, 1);
           }
       };
     };
@@ -2490,13 +2486,13 @@ function enlarge_1275070177(t_1275070180) {
     var n_1275070183 = [];
     n_1275070183 = new Array(chckRange(mulInt((t_1275070180.data).length, 2), 0, 2147483647)); for (var i = 0 ; i < chckRange(mulInt((t_1275070180.data).length, 2), 0, 2147483647) ; ++i) { n_1275070183[i] = {Field0: 0, Field1: [], Field2: []}; }    var Temporary1 = t_1275070180.data; t_1275070180.data = n_1275070183; n_1275070183 = Temporary1;    Label2: {
       var i_1275070243 = 0;
-      var colontmp__553649457 = 0;
-      colontmp__553649457 = (n_1275070183).length - 1;
-      var res_553649458 = 0;
+      var colontmp__553649481 = 0;
+      colontmp__553649481 = (n_1275070183).length - 1;
+      var res_553649482 = 0;
       Label3: {
           Label4: while (true) {
-          if (!(res_553649458 <= colontmp__553649457)) break Label4;
-            i_1275070243 = res_553649458;
+          if (!(res_553649482 <= colontmp__553649481)) break Label4;
+            i_1275070243 = res_553649482;
             var eh_1275070293 = n_1275070183[chckIndx(i_1275070243, 0, (n_1275070183).length - 1)].Field0;
             if (isFilled_1291845663(eh_1275070293)) {
             var j_1275070297 = (eh_1275070293 & (t_1275070180.data).length - 1);
@@ -2509,7 +2505,7 @@ function enlarge_1275070177(t_1275070180) {
             rawInsert_1275070451(t_1275070180, t_1275070180, "data", n_1275070183[chckIndx(i_1275070243, 0, (n_1275070183).length - 1)].Field1, n_1275070183[chckIndx(i_1275070243, 0, (n_1275070183).length - 1)].Field2, eh_1275070293, j_1275070297);
             }
             
-            res_553649458 = addInt(res_553649458, 1);
+            res_553649482 = addInt(res_553649482, 1);
           }
       };
     };
@@ -2599,23 +2595,23 @@ function parseQueryArrays_3103784992(query_3103784993) {
     var query_3103785023 = nimCopy(null, Temporary1, NTI33554449);
     Label2: {
       var i_3103785024 = [];
-      var lastHEX60gensym34_553649449 = 0;
-      var splitsHEX60gensym34_553649450 = (-1);
+      var lastHEX60gensym34_553649473 = 0;
+      var splitsHEX60gensym34_553649474 = (-1);
       Label3: {
           Label4: while (true) {
-          if (!(lastHEX60gensym34_553649449 <= (query_3103785023).length)) break Label4;
-            var firstHEX60gensym34_553649452 = lastHEX60gensym34_553649449;
+          if (!(lastHEX60gensym34_553649473 <= (query_3103785023).length)) break Label4;
+            var firstHEX60gensym34_553649476 = lastHEX60gensym34_553649473;
             Label5: {
                 Label6: while (true) {
-                if (!((lastHEX60gensym34_553649449 < (query_3103785023).length) && !((query_3103785023[chckIndx(lastHEX60gensym34_553649449, 0, (query_3103785023).length - 1)] == 38)))) break Label6;
-                  lastHEX60gensym34_553649449 = addInt(lastHEX60gensym34_553649449, 1);
+                if (!((lastHEX60gensym34_553649473 < (query_3103785023).length) && !((query_3103785023[chckIndx(lastHEX60gensym34_553649473, 0, (query_3103785023).length - 1)] == 38)))) break Label6;
+                  lastHEX60gensym34_553649473 = addInt(lastHEX60gensym34_553649473, 1);
                 }
             };
-            if ((splitsHEX60gensym34_553649450 == 0)) {
-            lastHEX60gensym34_553649449 = (query_3103785023).length;
+            if ((splitsHEX60gensym34_553649474 == 0)) {
+            lastHEX60gensym34_553649473 = (query_3103785023).length;
             }
             
-            i_3103785024 = substr_33558084(query_3103785023, firstHEX60gensym34_553649452, subInt(lastHEX60gensym34_553649449, 1));
+            i_3103785024 = substr_33558084(query_3103785023, firstHEX60gensym34_553649476, subInt(lastHEX60gensym34_553649473, 1));
             var splitted_3103785025 = nsuSplitChar(i_3103785024, 61, (-1));
             if (((2 <= (splitted_3103785025).length) && nsuEndsWith(splitted_3103785025[chckIndx(0, 0, (splitted_3103785025).length - 1)], [91,93]))) {
             var key_3103785047 = HEX5BHEX5D_738198811(splitted_3103785025[chckIndx(0, 0, (splitted_3103785025).length - 1)], HEX2EHEX2E_1040187497(0, 3));
@@ -2629,12 +2625,12 @@ function parseQueryArrays_3103784992(query_3103784993) {
             
             }
             
-            if ((splitsHEX60gensym34_553649450 == 0)) {
+            if ((splitsHEX60gensym34_553649474 == 0)) {
             break Label3;
             }
             
-            splitsHEX60gensym34_553649450 = subInt(splitsHEX60gensym34_553649450, 1);
-            lastHEX60gensym34_553649449 = addInt(lastHEX60gensym34_553649449, 1);
+            splitsHEX60gensym34_553649474 = subInt(splitsHEX60gensym34_553649474, 1);
+            lastHEX60gensym34_553649473 = addInt(lastHEX60gensym34_553649473, 1);
           }
       };
     };
@@ -2797,14 +2793,14 @@ function str_2415919237(input_2415919238, strVal_2415919239, strVal_2415919239_I
     var res_2415919243 = [];
     Label1: {
       var c_2415919262 = 0;
-      var colontmp__553649465 = [];
-      colontmp__553649465 = HEX5BHEX5D_738198811(input_2415919238, HEX2EHEX2E_1040187497(start_2415919240, 1));
-      var i_553649466 = 0;
-      var L_553649467 = (colontmp__553649465).length;
+      var colontmp__553649489 = [];
+      colontmp__553649489 = HEX5BHEX5D_738198811(input_2415919238, HEX2EHEX2E_1040187497(start_2415919240, 1));
+      var i_553649490 = 0;
+      var L_553649491 = (colontmp__553649489).length;
       Label2: {
           Label3: while (true) {
-          if (!(i_553649466 < L_553649467)) break Label3;
-            c_2415919262 = colontmp__553649465[chckIndx(i_553649466, 0, (colontmp__553649465).length - 1)];
+          if (!(i_553649490 < L_553649491)) break Label3;
+            c_2415919262 = colontmp__553649489[chckIndx(i_553649490, 0, (colontmp__553649489).length - 1)];
             if (!((c_2415919262 == 47))) {
             addChar(res_2415919243, c_2415919262);;
             result_2415919242 = addInt(result_2415919242, 1);
@@ -2813,8 +2809,8 @@ function str_2415919237(input_2415919238, strVal_2415919239, strVal_2415919239_I
               break Label1;
             }
             
-            i_553649466 += 1;
-            if (!(((colontmp__553649465).length == L_553649467))) {
+            i_553649490 += 1;
+            if (!(((colontmp__553649489).length == L_553649491))) {
             failedAssertImpl_268435541(makeNimstrLit("iterators.nim(272, 11) `len(a) == L` the length of the string changed while iterating over it"));
             }
             
@@ -3119,11 +3115,11 @@ function newElement_2197815503(name_2197815504) {
 function add_2197815318(self_2197815319, tags_2197815320) {
     Label1: {
       var tag_2197815334 = null;
-      var i_553649482 = 0;
+      var i_553649506 = 0;
       Label2: {
           Label3: while (true) {
-          if (!(i_553649482 < (tags_2197815320).length)) break Label3;
-            tag_2197815334 = tags_2197815320[chckIndx(i_553649482, 0, (tags_2197815320).length - 1)];
+          if (!(i_553649506 < (tags_2197815320).length)) break Label3;
+            tag_2197815334 = tags_2197815320[chckIndx(i_553649506, 0, (tags_2197815320).length - 1)];
             Label4: {
               if ((tag_2197815334 == null)) {
               break Label4;
@@ -3132,15 +3128,15 @@ function add_2197815318(self_2197815319, tags_2197815320) {
               if (tag_2197815334.onlyChildren) {
               Label5: {
                 var i_2197815360 = null;
-                var i_553649478 = 0;
-                var L_553649479 = (tag_2197815334.childNodes).length;
+                var i_553649502 = 0;
+                var L_553649503 = (tag_2197815334.childNodes).length;
                 Label6: {
                     Label7: while (true) {
-                    if (!(i_553649478 < L_553649479)) break Label7;
-                      i_2197815360 = tag_2197815334.childNodes[chckIndx(i_553649478, 0, (tag_2197815334.childNodes).length - 1)];
+                    if (!(i_553649502 < L_553649503)) break Label7;
+                      i_2197815360 = tag_2197815334.childNodes[chckIndx(i_553649502, 0, (tag_2197815334.childNodes).length - 1)];
                       add_2197815318(self_2197815319, [i_2197815360]);
-                      i_553649478 += 1;
-                      if (!(((tag_2197815334.childNodes).length == L_553649479))) {
+                      i_553649502 += 1;
+                      if (!(((tag_2197815334.childNodes).length == L_553649503))) {
                       failedAssertImpl_268435541(makeNimstrLit("iterators.nim(254, 11) `len(a) == L` the length of the seq changed while iterating over it"));
                       }
                       
@@ -3153,7 +3149,7 @@ function add_2197815318(self_2197815319, tags_2197815320) {
               }
               
             };
-            i_553649482 += 1;
+            i_553649506 += 1;
           }
       };
     };
@@ -3168,18 +3164,18 @@ function initTag_2197815655(name_2197815656, children_2197815661, onlyChildren_2
     result_2197815663.onlyChildren = onlyChildren_2197815662;
     Label1: {
       var child_2197815667 = null;
-      var i_553649471 = 0;
-      var L_553649472 = (children_2197815661).length;
+      var i_553649495 = 0;
+      var L_553649496 = (children_2197815661).length;
       Label2: {
           Label3: while (true) {
-          if (!(i_553649471 < L_553649472)) break Label3;
-            child_2197815667 = children_2197815661[chckIndx(i_553649471, 0, (children_2197815661).length - 1)];
+          if (!(i_553649495 < L_553649496)) break Label3;
+            child_2197815667 = children_2197815661[chckIndx(i_553649495, 0, (children_2197815661).length - 1)];
             if (!((child_2197815667 == null))) {
             add_2197815318(result_2197815663, [child_2197815667]);
             }
             
-            i_553649471 += 1;
-            if (!(((children_2197815661).length == L_553649472))) {
+            i_553649495 += 1;
+            if (!(((children_2197815661).length == L_553649496))) {
             failedAssertImpl_268435541(makeNimstrLit("iterators.nim(254, 11) `len(a) == L` the length of the seq changed while iterating over it"));
             }
             
@@ -3230,24 +3226,24 @@ function setAttributes_2197815472(name_2197815473, e_2197815474, attrs_219781547
       var key_2197815483 = [];
       var val_2197815484 = [];
       Label3: {
-        var h_553649495 = 0;
-        var colontmp__553649496 = 0;
-        colontmp__553649496 = (attrs_2197815475.data).length - 1;
-        var res_553649497 = 0;
+        var h_553649519 = 0;
+        var colontmp__553649520 = 0;
+        colontmp__553649520 = (attrs_2197815475.data).length - 1;
+        var res_553649521 = 0;
         Label4: {
             Label5: while (true) {
-            if (!(res_553649497 <= colontmp__553649496)) break Label5;
-              h_553649495 = res_553649497;
-              if (attrs_2197815475.data[chckIndx(h_553649495, 0, (attrs_2197815475.data).length - 1)].Field2) {
-              key_2197815483 = attrs_2197815475.data[chckIndx(h_553649495, 0, (attrs_2197815475.data).length - 1)].Field0;
-              val_2197815484 = attrs_2197815475.data[chckIndx(h_553649495, 0, (attrs_2197815475.data).length - 1)].Field1;
+            if (!(res_553649521 <= colontmp__553649520)) break Label5;
+              h_553649519 = res_553649521;
+              if (attrs_2197815475.data[chckIndx(h_553649519, 0, (attrs_2197815475.data).length - 1)].Field2) {
+              key_2197815483 = attrs_2197815475.data[chckIndx(h_553649519, 0, (attrs_2197815475.data).length - 1)].Field0;
+              val_2197815484 = attrs_2197815475.data[chckIndx(h_553649519, 0, (attrs_2197815475.data).length - 1)].Field1;
               if (!(eqStrings(key_2197815483, [99,108,97,115,115]))) {
               e_2197815474.setAttribute(toJSStr(key_2197815483), toJSStr(val_2197815484));
               }
               
               }
               
-              res_553649497 = addInt(res_553649497, 1);
+              res_553649521 = addInt(res_553649521, 1);
             }
         };
       };
@@ -3258,21 +3254,21 @@ function setAttributes_2197815472(name_2197815473, e_2197815474, attrs_219781547
         var key_2197815485 = [];
         var val_2197815486 = [];
         Label7: {
-          var h_553649501 = 0;
-          var colontmp__553649502 = 0;
-          colontmp__553649502 = (attrs_2197815475.data).length - 1;
-          var res_553649503 = 0;
+          var h_553649525 = 0;
+          var colontmp__553649526 = 0;
+          colontmp__553649526 = (attrs_2197815475.data).length - 1;
+          var res_553649527 = 0;
           Label8: {
               Label9: while (true) {
-              if (!(res_553649503 <= colontmp__553649502)) break Label9;
-                h_553649501 = res_553649503;
-                if (attrs_2197815475.data[chckIndx(h_553649501, 0, (attrs_2197815475.data).length - 1)].Field2) {
-                key_2197815485 = attrs_2197815475.data[chckIndx(h_553649501, 0, (attrs_2197815475.data).length - 1)].Field0;
-                val_2197815486 = attrs_2197815475.data[chckIndx(h_553649501, 0, (attrs_2197815475.data).length - 1)].Field1;
+              if (!(res_553649527 <= colontmp__553649526)) break Label9;
+                h_553649525 = res_553649527;
+                if (attrs_2197815475.data[chckIndx(h_553649525, 0, (attrs_2197815475.data).length - 1)].Field2) {
+                key_2197815485 = attrs_2197815475.data[chckIndx(h_553649525, 0, (attrs_2197815475.data).length - 1)].Field0;
+                val_2197815486 = attrs_2197815475.data[chckIndx(h_553649525, 0, (attrs_2197815475.data).length - 1)].Field1;
                 e_2197815474.setAttribute(toJSStr(key_2197815485), toJSStr(val_2197815486));
                 }
                 
-                res_553649503 = addInt(res_553649503, 1);
+                res_553649527 = addInt(res_553649527, 1);
               }
           };
         };
@@ -3291,12 +3287,12 @@ function initTag_2197815603(name_2197815604, attrs_2197815605, children_21978156
     setAttributes_2197815472(name_2197815604, result_2197815612, attrs_2197815605);
     Label1: {
       var child_2197815635 = null;
-      var i_553649486 = 0;
-      var L_553649487 = (children_2197815610).length;
+      var i_553649510 = 0;
+      var L_553649511 = (children_2197815610).length;
       Label2: {
           Label3: while (true) {
-          if (!(i_553649486 < L_553649487)) break Label3;
-            child_2197815635 = children_2197815610[chckIndx(i_553649486, 0, (children_2197815610).length - 1)];
+          if (!(i_553649510 < L_553649511)) break Label3;
+            child_2197815635 = children_2197815610[chckIndx(i_553649510, 0, (children_2197815610).length - 1)];
             Label4: {
               if ((child_2197815635 == null)) {
               break Label4;
@@ -3304,8 +3300,8 @@ function initTag_2197815603(name_2197815604, attrs_2197815605, children_21978156
               
               add_2197815318(result_2197815612, [child_2197815635]);
             };
-            i_553649486 += 1;
-            if (!(((children_2197815610).length == L_553649487))) {
+            i_553649510 += 1;
+            if (!(((children_2197815610).length == L_553649511))) {
             failedAssertImpl_268435541(makeNimstrLit("iterators.nim(254, 11) `len(a) == L` the length of the seq changed while iterating over it"));
             }
             
@@ -3328,12 +3324,12 @@ function initTag_2197815689(name_2197815690, isText_2197815691, children_2197815
       result_2197815698.onlyChildren = onlyChildren_2197815697;
       Label1: {
         var child_2197815702 = null;
-        var i_553649507 = 0;
-        var L_553649508 = (children_2197815696).length;
+        var i_553649531 = 0;
+        var L_553649532 = (children_2197815696).length;
         Label2: {
             Label3: while (true) {
-            if (!(i_553649507 < L_553649508)) break Label3;
-              child_2197815702 = children_2197815696[chckIndx(i_553649507, 0, (children_2197815696).length - 1)];
+            if (!(i_553649531 < L_553649532)) break Label3;
+              child_2197815702 = children_2197815696[chckIndx(i_553649531, 0, (children_2197815696).length - 1)];
               Label4: {
                 if ((child_2197815702 == null)) {
                 break Label4;
@@ -3341,8 +3337,8 @@ function initTag_2197815689(name_2197815690, isText_2197815691, children_2197815
                 
                 add_2197815318(result_2197815698, [child_2197815702]);
               };
-              i_553649507 += 1;
-              if (!(((children_2197815696).length == L_553649508))) {
+              i_553649531 += 1;
+              if (!(((children_2197815696).length == L_553649532))) {
               failedAssertImpl_268435541(makeNimstrLit("iterators.nim(254, 11) `len(a) == L` the length of the seq changed while iterating over it"));
               }
               
@@ -3356,12 +3352,12 @@ function initTag_2197815689(name_2197815690, isText_2197815691, children_2197815
 
 }
 
-function HEX24_553648730(self_553648732) {
-  var result_553648733 = [];
+function HEX24_553648795(self_553648797) {
+  var result_553648798 = [];
 
-    result_553648733 = nimCopy(null, HEX24_385875976(self_553648732.val), NTI33554449);
+    result_553648798 = nimCopy(null, HEX24_385875976(self_553648797.val), NTI33554449);
 
-  return result_553648733;
+  return result_553648798;
 
 }
 
@@ -3470,13 +3466,13 @@ function enlarge_2130710794(t_2130710797) {
     var n_2130710800 = [];
     n_2130710800 = new Array(chckRange(mulInt((t_2130710797.data).length, 2), 0, 2147483647)); for (var i = 0 ; i < chckRange(mulInt((t_2130710797.data).length, 2), 0, 2147483647) ; ++i) { n_2130710800[i] = {Field0: 0, Field1: null, Field2: null}; }    var Temporary1 = t_2130710797.data; t_2130710797.data = n_2130710800; n_2130710800 = Temporary1;    Label2: {
       var i_2130710860 = 0;
-      var colontmp__553649570 = 0;
-      colontmp__553649570 = (n_2130710800).length - 1;
-      var res_553649571 = 0;
+      var colontmp__553649594 = 0;
+      colontmp__553649594 = (n_2130710800).length - 1;
+      var res_553649595 = 0;
       Label3: {
           Label4: while (true) {
-          if (!(res_553649571 <= colontmp__553649570)) break Label4;
-            i_2130710860 = res_553649571;
+          if (!(res_553649595 <= colontmp__553649594)) break Label4;
+            i_2130710860 = res_553649595;
             var eh_2130710910 = n_2130710800[chckIndx(i_2130710860, 0, (n_2130710800).length - 1)].Field0;
             if (isFilled_1291845663(eh_2130710910)) {
             var j_2130710914 = (eh_2130710910 & (t_2130710797.data).length - 1);
@@ -3489,7 +3485,7 @@ function enlarge_2130710794(t_2130710797) {
             rawInsert_2130711068(t_2130710797, t_2130710797, "data", n_2130710800[chckIndx(i_2130710860, 0, (n_2130710800).length - 1)].Field1, n_2130710800[chckIndx(i_2130710860, 0, (n_2130710800).length - 1)].Field2, eh_2130710910, j_2130710914);
             }
             
-            res_553649571 = addInt(res_553649571, 1);
+            res_553649595 = addInt(res_553649595, 1);
           }
       };
     };
@@ -3574,15 +3570,15 @@ function attrIndex_2130710062(e_2130710063) {
     
     Label1: {
       var i_2130711496 = null;
-      var i_553649564 = 0;
-      var L_553649565 = (e_2130710063.attributes).length;
+      var i_553649588 = 0;
+      var L_553649589 = (e_2130710063.attributes).length;
       Label2: {
           Label3: while (true) {
-          if (!(i_553649564 < L_553649565)) break Label3;
-            i_2130711496 = e_2130710063.attributes[chckIndx(i_553649564, 0, (e_2130710063.attributes).length - 1)];
+          if (!(i_553649588 < L_553649589)) break Label3;
+            i_2130711496 = e_2130710063.attributes[chckIndx(i_553649588, 0, (e_2130710063.attributes).length - 1)];
             HEX5BHEX5DHEX3D_2130711533(attrs_2130711489, i_2130711496.nodeName, i_2130711496.nodeValue);
-            i_553649564 += 1;
-            if (!(((e_2130710063.attributes).length == L_553649565))) {
+            i_553649588 += 1;
+            if (!(((e_2130710063.attributes).length == L_553649589))) {
             failedAssertImpl_268435541(makeNimstrLit("iterators.nim(254, 11) `len(a) == L` the length of the seq changed while iterating over it"));
             }
             
@@ -3646,19 +3642,19 @@ function HEX3DHEX3D_2130711671(s_2130711674, t_2130711675) {
       Label1: {
         var keyHEX60gensym52_2130712057 = null;
         var valHEX60gensym52_2130712058 = null;
-        var L_553649579 = len_2130711830(s_2130711674);
+        var L_553649603 = len_2130711830(s_2130711674);
         Label2: {
-          var h_553649581 = 0;
-          var colontmp__553649582 = 0;
-          colontmp__553649582 = (s_2130711674.data).length - 1;
-          var res_553649583 = 0;
+          var h_553649605 = 0;
+          var colontmp__553649606 = 0;
+          colontmp__553649606 = (s_2130711674.data).length - 1;
+          var res_553649607 = 0;
           Label3: {
               Label4: while (true) {
-              if (!(res_553649583 <= colontmp__553649582)) break Label4;
-                h_553649581 = res_553649583;
-                if (isFilled_1291845663(s_2130711674.data[chckIndx(h_553649581, 0, (s_2130711674.data).length - 1)].Field0)) {
-                keyHEX60gensym52_2130712057 = s_2130711674.data[chckIndx(h_553649581, 0, (s_2130711674.data).length - 1)].Field1;
-                valHEX60gensym52_2130712058 = s_2130711674.data[chckIndx(h_553649581, 0, (s_2130711674.data).length - 1)].Field2;
+              if (!(res_553649607 <= colontmp__553649606)) break Label4;
+                h_553649605 = res_553649607;
+                if (isFilled_1291845663(s_2130711674.data[chckIndx(h_553649605, 0, (s_2130711674.data).length - 1)].Field0)) {
+                keyHEX60gensym52_2130712057 = s_2130711674.data[chckIndx(h_553649605, 0, (s_2130711674.data).length - 1)].Field1;
+                valHEX60gensym52_2130712058 = s_2130711674.data[chckIndx(h_553649605, 0, (s_2130711674.data).length - 1)].Field2;
                 if (!(hasKey_2130712095(t_2130711675, keyHEX60gensym52_2130712057))) {
                 result_2130711676 = false;
                 break BeforeRet;
@@ -3669,13 +3665,13 @@ function HEX3DHEX3D_2130711671(s_2130711674, t_2130711675) {
                 break BeforeRet;
                 }
                 
-                if (!((len_2130711830(s_2130711674) == L_553649579))) {
+                if (!((len_2130711830(s_2130711674) == L_553649603))) {
                 failedAssertImpl_268435541(makeNimstrLit("tables.nim(699, 13) `len(t) == L` the length of the table changed while iterating over it"));
                 }
                 
                 }
                 
-                res_553649583 = addInt(res_553649583, 1);
+                res_553649607 = addInt(res_553649607, 1);
               }
           };
         };
@@ -3753,19 +3749,19 @@ function patchAttrs_2130711630(dom_2130711631, vdom_2130711632) {
     Label1: {
       var key_2130712489 = null;
       var val_2130712490 = null;
-      var L_553649550 = len_2130712279(vdomAttrs_2130711634);
+      var L_553649574 = len_2130712279(vdomAttrs_2130711634);
       Label2: {
-        var h_553649552 = 0;
-        var colontmp__553649553 = 0;
-        colontmp__553649553 = (vdomAttrs_2130711634.data).length - 1;
-        var res_553649554 = 0;
+        var h_553649576 = 0;
+        var colontmp__553649577 = 0;
+        colontmp__553649577 = (vdomAttrs_2130711634.data).length - 1;
+        var res_553649578 = 0;
         Label3: {
             Label4: while (true) {
-            if (!(res_553649554 <= colontmp__553649553)) break Label4;
-              h_553649552 = res_553649554;
-              if (isFilled_1291845663(vdomAttrs_2130711634.data[chckIndx(h_553649552, 0, (vdomAttrs_2130711634.data).length - 1)].Field0)) {
-              key_2130712489 = vdomAttrs_2130711634.data[chckIndx(h_553649552, 0, (vdomAttrs_2130711634.data).length - 1)].Field1;
-              val_2130712490 = vdomAttrs_2130711634.data[chckIndx(h_553649552, 0, (vdomAttrs_2130711634.data).length - 1)].Field2;
+            if (!(res_553649578 <= colontmp__553649577)) break Label4;
+              h_553649576 = res_553649578;
+              if (isFilled_1291845663(vdomAttrs_2130711634.data[chckIndx(h_553649576, 0, (vdomAttrs_2130711634.data).length - 1)].Field0)) {
+              key_2130712489 = vdomAttrs_2130711634.data[chckIndx(h_553649576, 0, (vdomAttrs_2130711634.data).length - 1)].Field1;
+              val_2130712490 = vdomAttrs_2130711634.data[chckIndx(h_553649576, 0, (vdomAttrs_2130711634.data).length - 1)].Field2;
               if (!(hasKey_2130712527(domAttrs_2130711633, key_2130712489))) {
               dom_2130711631.setAttribute(key_2130712489, val_2130712490);
               if (((dom_2130711631.nodeName == "INPUT") && (key_2130712489 == "value"))) {
@@ -3782,13 +3778,13 @@ function patchAttrs_2130711630(dom_2130711631, vdom_2130711632) {
               
               }
               }
-              if (!((len_2130712279(vdomAttrs_2130711634) == L_553649550))) {
+              if (!((len_2130712279(vdomAttrs_2130711634) == L_553649574))) {
               failedAssertImpl_268435541(makeNimstrLit("tables.nim(1148, 13) `len(t) == L` the length of the table changed while iterating over it"));
               }
               
               }
               
-              res_553649554 = addInt(res_553649554, 1);
+              res_553649578 = addInt(res_553649578, 1);
             }
         };
       };
@@ -3796,30 +3792,30 @@ function patchAttrs_2130711630(dom_2130711631, vdom_2130711632) {
     Label6: {
       var key_2130712862 = null;
       var val_2130712863 = null;
-      var L_553649557 = len_2130712279(domAttrs_2130711633);
+      var L_553649581 = len_2130712279(domAttrs_2130711633);
       Label7: {
-        var h_553649559 = 0;
-        var colontmp__553649560 = 0;
-        colontmp__553649560 = (domAttrs_2130711633.data).length - 1;
-        var res_553649561 = 0;
+        var h_553649583 = 0;
+        var colontmp__553649584 = 0;
+        colontmp__553649584 = (domAttrs_2130711633.data).length - 1;
+        var res_553649585 = 0;
         Label8: {
             Label9: while (true) {
-            if (!(res_553649561 <= colontmp__553649560)) break Label9;
-              h_553649559 = res_553649561;
-              if (isFilled_1291845663(domAttrs_2130711633.data[chckIndx(h_553649559, 0, (domAttrs_2130711633.data).length - 1)].Field0)) {
-              key_2130712862 = domAttrs_2130711633.data[chckIndx(h_553649559, 0, (domAttrs_2130711633.data).length - 1)].Field1;
-              val_2130712863 = domAttrs_2130711633.data[chckIndx(h_553649559, 0, (domAttrs_2130711633.data).length - 1)].Field2;
+            if (!(res_553649585 <= colontmp__553649584)) break Label9;
+              h_553649583 = res_553649585;
+              if (isFilled_1291845663(domAttrs_2130711633.data[chckIndx(h_553649583, 0, (domAttrs_2130711633.data).length - 1)].Field0)) {
+              key_2130712862 = domAttrs_2130711633.data[chckIndx(h_553649583, 0, (domAttrs_2130711633.data).length - 1)].Field1;
+              val_2130712863 = domAttrs_2130711633.data[chckIndx(h_553649583, 0, (domAttrs_2130711633.data).length - 1)].Field2;
               if (!(hasKey_2130712527(vdomAttrs_2130711634, key_2130712862))) {
               dom_2130711631.removeAttribute(key_2130712862);
               }
               
-              if (!((len_2130712279(domAttrs_2130711633) == L_553649557))) {
+              if (!((len_2130712279(domAttrs_2130711633) == L_553649581))) {
               failedAssertImpl_268435541(makeNimstrLit("tables.nim(1148, 13) `len(t) == L` the length of the table changed while iterating over it"));
               }
               
               }
               
-              res_553649561 = addInt(res_553649561, 1);
+              res_553649585 = addInt(res_553649585, 1);
             }
         };
       };
@@ -3836,15 +3832,15 @@ function diff_2130712921(vdom_2130712922, dom_2130712923) {
       if (!!(dom_2130712923.hasChildNodes())) Temporary1 = false; else {        Temporary1 = vdom_2130712922.hasChildNodes();      }    if (Temporary1) {
     Label2: {
       var t_2130712927 = null;
-      var i_553649534 = 0;
-      var L_553649535 = (vdom_2130712922.childNodes).length;
+      var i_553649558 = 0;
+      var L_553649559 = (vdom_2130712922.childNodes).length;
       Label3: {
           Label4: while (true) {
-          if (!(i_553649534 < L_553649535)) break Label4;
-            t_2130712927 = vdom_2130712922.childNodes[chckIndx(i_553649534, 0, (vdom_2130712922.childNodes).length - 1)];
+          if (!(i_553649558 < L_553649559)) break Label4;
+            t_2130712927 = vdom_2130712922.childNodes[chckIndx(i_553649558, 0, (vdom_2130712922.childNodes).length - 1)];
             dom_2130712923.appendChild(t_2130712927.cloneNode(true));
-            i_553649534 += 1;
-            if (!(((vdom_2130712922.childNodes).length == L_553649535))) {
+            i_553649558 += 1;
+            if (!(((vdom_2130712922.childNodes).length == L_553649559))) {
             failedAssertImpl_268435541(makeNimstrLit("iterators.nim(254, 11) `len(a) == L` the length of the seq changed while iterating over it"));
             }
             
@@ -3857,15 +3853,15 @@ function diff_2130712921(vdom_2130712922, dom_2130712923) {
       if (((vdom_2130712922.childNodes).length < (dom_2130712923.childNodes).length)) {
       Label5: {
         var i_2130712944 = 0;
-        var colontmp__553649538 = 0;
-        colontmp__553649538 = subInt((dom_2130712923.childNodes).length, (vdom_2130712922.childNodes).length);
-        var i_553649539 = 0;
+        var colontmp__553649562 = 0;
+        colontmp__553649562 = subInt((dom_2130712923.childNodes).length, (vdom_2130712922.childNodes).length);
+        var i_553649563 = 0;
         Label6: {
             Label7: while (true) {
-            if (!(i_553649539 < colontmp__553649538)) break Label7;
-              i_2130712944 = i_553649539;
+            if (!(i_553649563 < colontmp__553649562)) break Label7;
+              i_2130712944 = i_553649563;
               (Temporary8 = HEX5BHEX5D_2130712945(dom_2130712923.childNodes, 1), Temporary8)[0][Temporary8[1]].remove();
-              i_553649539 = addInt(i_553649539, 1);
+              i_553649563 = addInt(i_553649563, 1);
             }
         };
       };
@@ -3873,13 +3869,13 @@ function diff_2130712921(vdom_2130712922, dom_2130712923) {
       
       Label9: {
         var i_2130712977 = 0;
-        var colontmp__553649542 = 0;
-        colontmp__553649542 = (vdom_2130712922.childNodes).length;
-        var i_553649543 = 0;
+        var colontmp__553649566 = 0;
+        colontmp__553649566 = (vdom_2130712922.childNodes).length;
+        var i_553649567 = 0;
         Label10: {
             Label11: while (true) {
-            if (!(i_553649543 < colontmp__553649542)) break Label11;
-              i_2130712977 = i_553649543;
+            if (!(i_553649567 < colontmp__553649566)) break Label11;
+              i_2130712977 = i_553649567;
               if (((dom_2130712923.childNodes).length <= i_2130712977)) {
               dom_2130712923.appendChild(vdom_2130712922.childNodes[chckIndx(i_2130712977, 0, (vdom_2130712922.childNodes).length - 1)].cloneNode(true));
               }
@@ -3904,7 +3900,7 @@ function diff_2130712921(vdom_2130712922, dom_2130712923) {
               diff_2130712921(vdom_2130712922.childNodes[chckIndx(i_2130712977, 0, (vdom_2130712922.childNodes).length - 1)], dom_2130712923.childNodes[chckIndx(i_2130712977, 0, (dom_2130712923.childNodes).length - 1)]);
               }
               
-              i_553649543 = addInt(i_553649543, 1);
+              i_553649567 = addInt(i_553649567, 1);
             }
         };
       };
@@ -4025,13 +4021,13 @@ function enlarge_2130708713(t_2130708716) {
     var n_2130708719 = [];
     n_2130708719 = new Array(chckRange(mulInt((t_2130708716.data).length, 2), 0, 2147483647)); for (var i = 0 ; i < chckRange(mulInt((t_2130708716.data).length, 2), 0, 2147483647) ; ++i) { n_2130708719[i] = {Field0: 0, Field1: null, Field2: null}; }    var Temporary1 = t_2130708716.data; t_2130708716.data = n_2130708719; n_2130708719 = Temporary1;    Label2: {
       var i_2130708779 = 0;
-      var colontmp__553649589 = 0;
-      colontmp__553649589 = (n_2130708719).length - 1;
-      var res_553649590 = 0;
+      var colontmp__553649613 = 0;
+      colontmp__553649613 = (n_2130708719).length - 1;
+      var res_553649614 = 0;
       Label3: {
           Label4: while (true) {
-          if (!(res_553649590 <= colontmp__553649589)) break Label4;
-            i_2130708779 = res_553649590;
+          if (!(res_553649614 <= colontmp__553649613)) break Label4;
+            i_2130708779 = res_553649614;
             var eh_2130708829 = n_2130708719[chckIndx(i_2130708779, 0, (n_2130708719).length - 1)].Field0;
             if (isFilled_1291845663(eh_2130708829)) {
             var j_2130708833 = (eh_2130708829 & (t_2130708716.data).length - 1);
@@ -4044,7 +4040,7 @@ function enlarge_2130708713(t_2130708716) {
             rawInsert_2130708987(t_2130708716, t_2130708716, "data", n_2130708719[chckIndx(i_2130708779, 0, (n_2130708719).length - 1)].Field1, n_2130708719[chckIndx(i_2130708779, 0, (n_2130708719).length - 1)].Field2, eh_2130708829, j_2130708833);
             }
             
-            res_553649590 = addInt(res_553649590, 1);
+            res_553649614 = addInt(res_553649614, 1);
           }
       };
     };
@@ -4143,17 +4139,17 @@ function find_2130713649(a_2130713652, item_2130713653) {
     result_2130713654 = 0;
     Label1: {
       var i_2130713668 = null;
-      var i_553649595 = 0;
+      var i_553649619 = 0;
       Label2: {
           Label3: while (true) {
-          if (!(i_553649595 < (a_2130713652).length)) break Label3;
-            i_2130713668 = a_2130713652[chckIndx(i_553649595, 0, (a_2130713652).length - 1)];
+          if (!(i_553649619 < (a_2130713652).length)) break Label3;
+            i_2130713668 = a_2130713652[chckIndx(i_553649619, 0, (a_2130713652).length - 1)];
             if ((i_2130713668 == item_2130713653)) {
             break BeforeRet;
             }
             
             result_2130713654 = addInt(result_2130713654, 1);
-            i_553649595 += 1;
+            i_553649619 += 1;
           }
       };
     };
@@ -4181,18 +4177,18 @@ function renderVdom_2130712989(app_2130712990, tag_2130712991, force_2130712992)
     var activeElement_2130712994 = document.activeElement;
     Label1: {
       var i_2130713017 = {Field0: [], Field1: null};
-      var i_553649512 = 0;
-      var L_553649513 = (rendererHandlers_2130706531[0]).length;
+      var i_553649536 = 0;
+      var L_553649537 = (rendererHandlers_2130706531[0]).length;
       Label2: {
           Label3: while (true) {
-          if (!(i_553649512 < L_553649513)) break Label3;
-            i_2130713017 = rendererHandlers_2130706531[0][chckIndx(i_553649512, 0, (rendererHandlers_2130706531[0]).length - 1)];
+          if (!(i_553649536 < L_553649537)) break Label3;
+            i_2130713017 = rendererHandlers_2130706531[0][chckIndx(i_553649536, 0, (rendererHandlers_2130706531[0]).length - 1)];
             if (eqStrings(i_2130713017.Field0, [98,101,102,111,114,101,82,101,110,100,101,114,101,100])) {
             i_2130713017.Field1();
             }
             
-            i_553649512 += 1;
-            if (!(((rendererHandlers_2130706531[0]).length == L_553649513))) {
+            i_553649536 += 1;
+            if (!(((rendererHandlers_2130706531[0]).length == L_553649537))) {
             failedAssertImpl_268435541(makeNimstrLit("iterators.nim(254, 11) `len(a) == L` the length of the seq changed while iterating over it"));
             }
             
@@ -4202,18 +4198,18 @@ function renderVdom_2130712989(app_2130712990, tag_2130712991, force_2130712992)
     diff_2130712921(tag_2130712991, realDom_2130712993);
     Label4: {
       var i_2130713021 = {Field0: [], Field1: null};
-      var i_553649516 = 0;
-      var L_553649517 = (rendererHandlers_2130706531[0]).length;
+      var i_553649540 = 0;
+      var L_553649541 = (rendererHandlers_2130706531[0]).length;
       Label5: {
           Label6: while (true) {
-          if (!(i_553649516 < L_553649517)) break Label6;
-            i_2130713021 = rendererHandlers_2130706531[0][chckIndx(i_553649516, 0, (rendererHandlers_2130706531[0]).length - 1)];
+          if (!(i_553649540 < L_553649541)) break Label6;
+            i_2130713021 = rendererHandlers_2130706531[0][chckIndx(i_553649540, 0, (rendererHandlers_2130706531[0]).length - 1)];
             if (eqStrings(i_2130713021.Field0, [114,101,110,100,101,114,101,100])) {
             i_2130713021.Field1();
             }
             
-            i_553649516 += 1;
-            if (!(((rendererHandlers_2130706531[0]).length == L_553649517))) {
+            i_553649540 += 1;
+            if (!(((rendererHandlers_2130706531[0]).length == L_553649541))) {
             failedAssertImpl_268435541(makeNimstrLit("iterators.nim(254, 11) `len(a) == L` the length of the seq changed while iterating over it"));
             }
             
@@ -4223,16 +4219,16 @@ function renderVdom_2130712989(app_2130712990, tag_2130712991, force_2130712992)
     if (force_2130712992) {
     Label7: {
       var comp_2130713044 = null;
-      var i_553649521 = 0;
-      var L_553649522 = (createdComponentsList_2130707985[0]).length;
+      var i_553649545 = 0;
+      var L_553649546 = (createdComponentsList_2130707985[0]).length;
       Label8: {
           Label9: while (true) {
-          if (!(i_553649521 < L_553649522)) break Label9;
-            comp_2130713044 = createdComponentsList_2130707985[0][chckIndx(i_553649521, 0, (createdComponentsList_2130707985[0]).length - 1)];
+          if (!(i_553649545 < L_553649546)) break Label9;
+            comp_2130713044 = createdComponentsList_2130707985[0][chckIndx(i_553649545, 0, (createdComponentsList_2130707985[0]).length - 1)];
             comp_2130713044.exited(comp_2130713044, null);
             del_2130713081(components_2130709440[0], toJSStr(comp_2130713044.uniqCompId));
-            i_553649521 += 1;
-            if (!(((createdComponentsList_2130707985[0]).length == L_553649522))) {
+            i_553649545 += 1;
+            if (!(((createdComponentsList_2130707985[0]).length == L_553649546))) {
             failedAssertImpl_268435541(makeNimstrLit("iterators.nim(254, 11) `len(a) == L` the length of the seq changed while iterating over it"));
             }
             
@@ -4242,16 +4238,16 @@ function renderVdom_2130712989(app_2130712990, tag_2130712991, force_2130712992)
     Label10: {
       var comp_2130713589 = null;
       var comp_2130713589_Idx = 0;
-      var i_553649526 = 0;
-      var L_553649527 = (currentComponentsList_2130707980[0]).length;
+      var i_553649550 = 0;
+      var L_553649551 = (currentComponentsList_2130707980[0]).length;
       Label11: {
           Label12: while (true) {
-          if (!(i_553649526 < L_553649527)) break Label12;
-            comp_2130713589 = currentComponentsList_2130707980[0]; comp_2130713589_Idx = chckIndx(i_553649526, 0, (currentComponentsList_2130707980[0]).length - 1);
+          if (!(i_553649550 < L_553649551)) break Label12;
+            comp_2130713589 = currentComponentsList_2130707980[0]; comp_2130713589_Idx = chckIndx(i_553649550, 0, (currentComponentsList_2130707980[0]).length - 1);
             comp_2130713589[comp_2130713589_Idx] = registerComponent_2130709533(toJSStr(comp_2130713589[comp_2130713589_Idx].uniqCompId), comp_2130713589[comp_2130713589_Idx]);
             comp_2130713589[comp_2130713589_Idx].updated(comp_2130713589[comp_2130713589_Idx], null);
-            i_553649526 += 1;
-            if (!(((currentComponentsList_2130707980[0]).length == L_553649527))) {
+            i_553649550 += 1;
+            if (!(((currentComponentsList_2130707980[0]).length == L_553649551))) {
             failedAssertImpl_268435541(makeNimstrLit("iterators.nim(263, 11) `len(a) == L` the length of the seq changed while iterating over it"));
             }
             
@@ -4264,15 +4260,15 @@ function renderVdom_2130712989(app_2130712990, tag_2130712991, force_2130712992)
     else {
       Label13: {
         var comp_2130713597 = null;
-        var i_553649530 = 0;
-        var L_553649531 = (currentComponentsList_2130707980[0]).length;
+        var i_553649554 = 0;
+        var L_553649555 = (currentComponentsList_2130707980[0]).length;
         Label14: {
             Label15: while (true) {
-            if (!(i_553649530 < L_553649531)) break Label15;
-              comp_2130713597 = currentComponentsList_2130707980[0][chckIndx(i_553649530, 0, (currentComponentsList_2130707980[0]).length - 1)];
+            if (!(i_553649554 < L_553649555)) break Label15;
+              comp_2130713597 = currentComponentsList_2130707980[0][chckIndx(i_553649554, 0, (currentComponentsList_2130707980[0]).length - 1)];
               comp_2130713597.updated(comp_2130713597, null);
-              i_553649530 += 1;
-              if (!(((currentComponentsList_2130707980[0]).length == L_553649531))) {
+              i_553649554 += 1;
+              if (!(((currentComponentsList_2130707980[0]).length == L_553649555))) {
               failedAssertImpl_268435541(makeNimstrLit("iterators.nim(254, 11) `len(a) == L` the length of the seq changed while iterating over it"));
               }
               
@@ -4333,46 +4329,27 @@ function callRouter_553648281(force_553648282) {
       
     if ((res_553648388 && ((inp_553648389).length <= idx_553648387))) {
     Label2: {
-      var fmtRes_553648590 = [mnewString(0)];
-      fmtRes_553648590[0].push.apply(fmtRes_553648590[0], [102,108,101,120,32,102,108,101,120,45,99,111,108,32,119,45,115,99,114,101,101,110,32,109,105,110,45,104,45,115,99,114,101,101,110,32,104,45,102,117,108,108,32,112,45,49,50,32,98,103,45,91]);;
-      add_33556373(fmtRes_553648590, 0, tg_553648131[0].themeParams.bg_color);
-      fmtRes_553648590[0].push.apply(fmtRes_553648590[0], [93,32,116,101,120,116,45,91]);;
-      add_33556373(fmtRes_553648590, 0, tg_553648131[0].themeParams.text_color);
-      fmtRes_553648590[0].push.apply(fmtRes_553648590[0], [93]);;
+      var fmtRes_553648586 = [mnewString(0)];
+      fmtRes_553648586[0].push.apply(fmtRes_553648586[0], [102,108,101,120,32,102,108,101,120,45,99,111,108,32,119,45,115,99,114,101,101,110,32,109,105,110,45,104,45,115,99,114,101,101,110,32,104,45,102,117,108,108,32,112,45,49,50,32,98,103,45,91]);;
+      add_33556373(fmtRes_553648586, 0, tg_553648131[0].themeParams.bg_color);
+      fmtRes_553648586[0].push.apply(fmtRes_553648586[0], [93,32,116,101,120,116,45,91]);;
+      add_33556373(fmtRes_553648586, 0, tg_553648131[0].themeParams.text_color);
+      fmtRes_553648586[0].push.apply(fmtRes_553648586[0], [93]);;
     };
-    Label3: {
-      var fmtRes_553648801 = [mnewString(0)];
-      fmtRes_553648801[0].push.apply(fmtRes_553648801[0], [98,97,99,107,103,114,111,117,110,100,58,32]);;
-      add_33556373(fmtRes_553648801, 0, tg_553648131[0].themeParams.button_color);
-      fmtRes_553648801[0].push.apply(fmtRes_553648801[0], [59,32,99,111,108,111,114,58,32]);;
-      add_33556373(fmtRes_553648801, 0, tg_553648131[0].themeParams.button_text_color);
-    };
-    var __el1_553648813 = initTag_2197815603([98,117,116,116,111,110], nstnewStringTableWithTableConstr([nimCopy(null, {Field0: [115,116,121,108,101], Field1: nimCopy(null, fmtRes_553648801[0], NTI33554449)}, NTI553648599)], 0), [initTag_2197815689([99,108,105,99,107,32,109,101,33], true, [], false)], false);
-    __el1_553648813.addEventListener('click', async (event) => {
-    Label4: {
-      var ev_553648814 = null;
-      ev_553648814 = event;
-      counter_553648153[0].val = addInt(counter_553648153[0].val, 1);
-      if ((enableRouting_2600468490[0] && !((application_2130706532[0] == null)))) {
-      application_2130706532[0].router(false);
-      }
-      
-    };
-    });
-    html_553648288 = initTag_2197815655([100,105,118], [initTag_2197815603([100,105,118], nstnewStringTableWithTableConstr([nimCopy(null, {Field0: [99,108,97,115,115], Field1: nimCopy(null, fmtRes_553648590[0], NTI33554449)}, NTI553648433)], 0), [initTag_2197815655([112], [initTag_2197815689([72,101,108,108,111,32,102,114,111,109,32,78,105,109,33,32,67,111,117,110,116,101,114,32,105,115,32], true, [], false), initTag_2197815689(HEX24_553648730(counter_553648153[0]), true, [], false)], false), __el1_553648813, initTag_2197815655([112], [initTag_2197815689([84,101,108,101,103,114,97,109,32,118], true, [], false), initTag_2197815689(cstrToNimstr(tg_553648131[0].version), true, [], false)], false)], false)], true);
+    html_553648288 = initTag_2197815655([100,105,118], [initTag_2197815603([100,105,118], nstnewStringTableWithTableConstr([nimCopy(null, {Field0: [99,108,97,115,115], Field1: nimCopy(null, fmtRes_553648586[0], NTI33554449)}, NTI553648433)], 0), [initTag_2197815603([112], nstnewStringTableWithTableConstr([{Field0: [99,108,97,115,115], Field1: [116,101,120,116,45,51,120,108]}], 0), [initTag_2197815689([72,101,108,108,111,32,102,114,111,109,32,78,105,109,33], true, [], false)], false), initTag_2197815603([112], nstnewStringTableWithTableConstr([{Field0: [99,108,97,115,115], Field1: [116,101,120,116,45,55,120,108]}], 0), [initTag_2197815689(HEX24_553648795(counter_553648153[0]), true, [], false)], false), initTag_2197815603([100,105,118], nstnewStringTableWithTableConstr([{Field0: [99,108,97,115,115], Field1: [102,105,120,101,100,32,98,111,116,116,111,109,45,52,32,114,105,103,104,116,45,52,32,111,112,97,99,105,116,121,45,55,48]}], 0), [initTag_2197815655([112], [initTag_2197815689([89,111,117,114,32,116,101,108,101,103,114,97,109,32,118,101,114,115,105,111,110,32,105,115,32,118], true, [], false), initTag_2197815689(cstrToNimstr(tg_553648131[0].version), true, [], false)], false)], false)], false)], true);
     }
     
     if (!((html_553648288 == null))) {
     renderVdom_2130712989(application_2130706532[0], html_553648288, force_553648282);
     if (activeElement_553648284.hasAttribute("id")) {
     rawEcho([49,48,48]);
-    var _activeElement__553648914 = document.getElementById(activeElement_553648284.id);
-    if (!((_activeElement__553648914 == null))) {
-    _activeElement__553648914.focus();
-    if (contains_2130713644(["INPUT", "TEXTAREA"], _activeElement__553648914.nodeName)) {
-    var oldActiveElement_553648973 = activeElement_553648284;
-    var currentActiveElement_553648974 = _activeElement__553648914;
-    currentActiveElement_553648974.setSelectionRange(oldActiveElement_553648973.selectionStart, oldActiveElement_553648973.selectionEnd, oldActiveElement_553648973.selectionDirection);
+    var _activeElement__553648958 = document.getElementById(activeElement_553648284.id);
+    if (!((_activeElement__553648958 == null))) {
+    _activeElement__553648958.focus();
+    if (contains_2130713644(["INPUT", "TEXTAREA"], _activeElement__553648958.nodeName)) {
+    var oldActiveElement_553649017 = activeElement_553648284;
+    var currentActiveElement_553649018 = _activeElement__553648958;
+    currentActiveElement_553649018.setSelectionRange(oldActiveElement_553649017.selectionStart, oldActiveElement_553649017.selectionEnd, oldActiveElement_553649017.selectionDirection);
     }
     
     }
@@ -4386,7 +4363,7 @@ function callRouter_553648281(force_553648282) {
   
 }
 
-function onDOMContentLoaded_553649041(ev_553649042) {
+function onDOMContentLoaded_553649067(ev_553649068) {
     callRouter_553648281(false);
 
   
@@ -4426,12 +4403,12 @@ var _ = tg_553648131[0].MainButton.onClick(HEX3Aanonymous_553648154);
 tg_553648131[0].expand();
 var app_553648175 = [registerApp_2130709498("app")];
 app_553648175[0].router = callRouter_553648281;
-if (globalThis.alreadyExecutedHEX60gensym11_553649046 === undefined) {
-  globalThis.alreadyExecutedHEX60gensym11_553649046 = [false];
+if (globalThis.alreadyExecutedHEX60gensym8_553649072 === undefined) {
+  globalThis.alreadyExecutedHEX60gensym8_553649072 = [false];
 }
-if (!(alreadyExecutedHEX60gensym11_553649046[0])) {
-alreadyExecutedHEX60gensym11_553649046[0] = true;
-document.addEventListener("hashchange", onDOMContentLoaded_553649041, false);
+if (!(alreadyExecutedHEX60gensym8_553649072[0])) {
+alreadyExecutedHEX60gensym8_553649072[0] = true;
+document.addEventListener("hashchange", onDOMContentLoaded_553649067, false);
 }
 
 function onHashChangeCallback() {
@@ -4443,10 +4420,10 @@ else {
 Temporary2 = window.location.hash;
 }
 
-var rHEX60gensym10_553649258 = Temporary2;
-if (!(eqStrings(cstrToNimstr(rHEX60gensym10_553649258), cstrToNimstr(currentRoute_2130706533[0])))) {
-rawEcho([114,111,117,116,101,32,102,114,111,109,32], cstrToNimstr(currentRoute_2130706533[0]), [32,116,111,32], cstrToNimstr(rHEX60gensym10_553649258));
-route_2130709475(rHEX60gensym10_553649258);
+var rHEX60gensym7_553649284 = Temporary2;
+if (!(eqStrings(cstrToNimstr(rHEX60gensym7_553649284), cstrToNimstr(currentRoute_2130706533[0])))) {
+rawEcho([114,111,117,116,101,32,102,114,111,109,32], cstrToNimstr(currentRoute_2130706533[0]), [32,116,111,32], cstrToNimstr(rHEX60gensym7_553649284));
+route_2130709475(rHEX60gensym7_553649284);
 }
 
 
